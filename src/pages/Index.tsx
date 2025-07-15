@@ -1,6 +1,14 @@
 import { useState } from "react";
 import POSSidebar from "@/components/POSSidebar";
 import Dashboard from "@/components/Dashboard";
+import TableManagement from "@/components/TableManagement";
+import MenuManagement from "@/components/MenuManagement";
+import OrderManagement from "@/components/OrderManagement";
+import Reports from "@/components/Reports";
+import InventoryManagement from "@/components/InventoryManagement";
+import TransactionHistory from "@/components/TransactionHistory";
+import UserManagement from "@/components/UserManagement";
+import Settings from "@/components/Settings";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -10,21 +18,21 @@ const Index = () => {
       case "dashboard":
         return <Dashboard />;
       case "tables":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Manajemen Meja</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <TableManagement />;
       case "menu":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Manajemen Menu</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <MenuManagement />;
       case "orders":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Manajemen Pesanan</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <OrderManagement />;
       case "reports":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Laporan</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <Reports />;
       case "inventory":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Manajemen Stok</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <InventoryManagement />;
       case "history":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Riwayat Transaksi</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <TransactionHistory />;
       case "users":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Manajemen Pengguna</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <UserManagement />;
       case "settings":
-        return <div className="p-6"><h1 className="text-2xl font-bold">Pengaturan</h1><p className="text-muted-foreground mt-2">Fitur ini akan segera tersedia</p></div>;
+        return <Settings />;
       default:
         return <Dashboard />;
     }
